@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
+/*
 typedef struct s_list
 {
 	int x;
@@ -131,3 +131,4 @@ int main() {
 		printf("%d %d\n", box[i].x, box[i].y);
 	}
 }
+*/
