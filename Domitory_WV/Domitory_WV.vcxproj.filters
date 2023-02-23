@@ -102,5 +102,11 @@
     <ClCompile Include="10989.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="7576.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS_sample.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
