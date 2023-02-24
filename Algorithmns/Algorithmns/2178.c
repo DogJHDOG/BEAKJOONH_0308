@@ -1,3 +1,9 @@
+
+//2178 틀림
+//질문 해놓음 
+//확인필요
+
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -6,8 +12,8 @@ int tot[200][200] = { 0, };
 int Arr[200][200] = { 0, };
 int q[10000][2] = { 0, };
 int N, M;
-int head = 0;
-int tail = 0;
+int head = 1;
+int tail = 1;
 
 
 int BFS() {
@@ -19,6 +25,7 @@ int BFS() {
 	int click = 0;
 	
 	if ((ty - 1) > 0) {
+		
 		if (Arr[ty - 1][tx] == 1) {
 			q[tail][0] = tx;
 			q[tail][1] = ty - 1;
@@ -86,3 +93,4 @@ int main() {
 	}
 
 }
+*/
