@@ -157,6 +157,7 @@
     <ClCompile Include="2775.c" />
     <ClCompile Include="2839.c" />
     <ClCompile Include="4153.c" />
+    <ClCompile Include="7569.c" />
     <ClCompile Include="7576.c" />
     <ClCompile Include="BFS_sample.c" />
     <ClCompile Include="C_DataStructure_Queue.c" />

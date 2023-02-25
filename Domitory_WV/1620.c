@@ -1,3 +1,9 @@
+
+//다시 확인 필요
+//집합과 맵
+//해시 부분 학습 필요
+
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,4 +52,4 @@ int main() {
 		}
 	}
 
-}
+}*/
