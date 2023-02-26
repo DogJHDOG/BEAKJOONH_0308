@@ -1,5 +1,8 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+
+//1회 수정 X,Y,Z 문제 내에 정해져 있음 - > 확인 못함 -> 고쳐짐
 
 int Arr[105][105][105] = { 0, };
 int head = 0;
@@ -45,7 +48,7 @@ int main() {
 		for (int j = 0; j < X; j++) {
 			for (int k = 0; k < Z; k++) {
 
-				scanf("%d", &Arr[j][i][k]);
+				scanf("%d", &Arr[j][i][k]);	
 				if (Arr[j][i][k] == 1) {
 					q[tail][0] = j;
 					q[tail][1] = i;
@@ -83,4 +86,4 @@ int main() {
 	}
 
 	printf("%d", mst-1);
-}
+}*/
