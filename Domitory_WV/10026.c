@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -10,7 +11,7 @@ int dy[4] = { 0,0,1,-1};
 int N;
 int DFS(int k,int x,int y) {
 	
-	printf("%d : %d %d\n", k, x, y);
+//	printf("%d : %d %d\n", k, x, y);
 	Arr[y][x] = 0;
 
 	for (int i = 0; i < 4; i++) {
@@ -26,7 +27,7 @@ int DFS(int k,int x,int y) {
 
 int DFS2(int k, int x, int y) {
 
-	printf("%d : %d %d\n", k, x, y);
+//	printf("%d : %d %d\n", k, x, y);
 	Arr2[y][x] = 0;
 
 	for (int i = 0; i < 4; i++) {
@@ -87,3 +88,4 @@ int main() {
 	printf("%d %d", click, click2);
 
 }
+*/
