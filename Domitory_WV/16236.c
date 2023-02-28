@@ -1,4 +1,4 @@
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -18,18 +18,23 @@ int dx[4] = { 0,-1,1,0 };
 int dy[4] = { -1,0,0,1 };
 int N;
 
-int BFS(int X, int Y) {
+
+
+ int BFS(int X, int Y) {
 
 	q[head][0] = X;
 	q[head][1] = Y;
+	Arr[q[0][1]][q[0][0]] = 0;
+
 	tail++;
-	printf("\n%d %d %d\n", max,size,click);
+//	printf("\n%d %d %d\n", max,size,click);
+	
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			temp[i][j] = 0;
-			printf("%d ", Arr[i][j]);
+//			printf("%d ", Arr[i][j]);
 		}
-		printf("\n");
+//		printf("\n");
 	}
 	
 	while (head < tail)
@@ -37,70 +42,63 @@ int BFS(int X, int Y) {
 
 		int x = q[head][0];
 		int y = q[head][1];
-//		printf("%d %d\n", x, y);
-		for (int i = 0; i < 4; i++) {
-			if ((((x + dx[i]) >= 0) && ((x + dx[i]) < N)) && (((y + dy[i]) >= 0) && ((y + dy[i]) < N))) {
-				if (size >= Arr[y + dy[i]][x + dx[i]]) {
-	//				printf("%d %d %d\n", x+dx[i], y+dy[i], Arr[y + dy[i]][x + dx[i]]);
 
-					if (temp[y + dy[i]][x + dx[i]] == 0) {
-						temp[y + dy[i]][x + dx[i]] = 1;
-						check[y + dy[i]][x + dx[i]] = check[y][x] + 1;
-						q[tail][0] = x + dx[i];
-						q[tail][1] = y + dy[i];
-						tail++;
+		if ((size > Arr[y][x]) && (Arr[y][x] > 0)) {
+			click++;
+			int tt = 0;
+			int tk = 0;
+	
+			int large = q[head][1];
+			for (int k = head + 1; k < tail; k++) {
+				if ((check[q[k][1]][q[k][0]]<=check[y][x]) && (Arr[q[k][1]][q[k][0]] < size)&&(Arr[q[k][1]][q[k][0]]>0) && (large > q[k][1])) {
+					tt = 1;
+					large = q[k][1];
+					max = check[q[k][1]][q[k][0]];
+					tk = k;
+				}
+			}
+			
+			if (click == size) {
+				size += 1;
+				click = 0;
+			}
 
-						if ((Arr[y + dy[i]][x + dx[i]] > 0)&&(Arr[y+dy[i]][x+dx[i]] < size)) {						
-							
-							click++;
-							int tt = 0;
-							int tk = 0;
+			if (tt == 0) {
+				Arr[y][x] = 0;
+				head = 0;
+				tail = 0;
+				max = check[y][x];
+				BFS(x, y);
+				break;
+			}
+			
+			else {
 
-							if (y + dy[i] > q[head][1]) {
-
-								for (int k = head + 1; k < tail; k++) {
-									
-									if ((Arr[q[k][1]][q[k][0]] < size)&&q[head][1]<q[k][1]) {
-										tt = 1;
-										if (click == size) {
-											size += 1;
-											click = 0;
-										}
-										head = 0;
-										tail = 0;
-										Arr[q[k][1]][q[k][0]] = 0;
-//										Arr[y + dy[i]][x + dx[i]] = 0;
-										max = check[q[k][1]][q[k][0]];
-										tk = k;
-										break;
-									}
+				Arr[q[tk][1]][q[tk][0]] = 0;
+				head = 0;
+				tail = 0;
+				max = check[q[tk][1]][q[tk][0]];
+				BFS(q[tk][0], q[tk][1]);
+				break;
+			}
+		}
+		else {
+			for (int i = 0; i < 4; i++) {
+				if ((((x + dx[i]) >= 0) && ((x + dx[i]) < N)) && (((y + dy[i]) >= 0) && ((y + dy[i]) < N))) {
+					if (size >= Arr[y + dy[i]][x + dx[i]]) {
+						if (temp[y + dy[i]][x + dx[i]] == 0) {
+							temp[y + dy[i]][x + dx[i]] = 1;
+							check[y + dy[i]][x + dx[i]] = check[y][x] + 1;
+							q[tail][0] = x + dx[i];
+							q[tail][1] = y + dy[i];
+							tail++;
 							}
 
-							}
-							if (tt == 0) {
-								if (click == size) {
-									size += 1;
-									click = 0;
-								}
-								head = 0;
-								tail = 0;
-								Arr[q[head][1]][q[head][0]] = 0;
-								Arr[y + dy[i]][x + dx[i]] = 0;
-								max = check[y + dy[i]][x + dx[i]];
-								BFS(x + dx[i], y + dy[i]);
-								break;
-							}
-							else {
-								BFS(q[tk][0], q[tk][1]);
-								break;
-							}
 						}
 					}
 				}
-			}
+			head++;
 		}
-		head++;
-
 	}
 
 }
@@ -116,7 +114,7 @@ int main() {
 			if (Arr[i][j] == 9) {
 				x = j;
 				y = i;
-				Arr[i][j] = size;
+				Arr[i][j] = 0;
 			}
 		}
 	}
@@ -125,5 +123,3 @@ int main() {
 
 	printf("%d", max);
 }
-
-*/
