@@ -1,3 +1,13 @@
+
+
+
+//1회 hash 모방 -> 실패
+
+
+//qsort 및 이분탐색에 대한 사용으로 3회후 성공
+
+
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -68,4 +78,4 @@ int main() {
 	}
 
 
-}
+}*/
