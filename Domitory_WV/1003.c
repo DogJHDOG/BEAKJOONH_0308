@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -23,4 +24,4 @@ int main() {
 		printf("%d %d\n", Arr[k][0], Arr[k][1]);
 	}
 
-}
+}*/
