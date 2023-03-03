@@ -1,4 +1,4 @@
-/*
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -49,12 +49,23 @@ int N;
 			int tk = 0;
 	
 			int large = q[head][1];
+			int semi = q[head][0];
 			for (int k = head + 1; k < tail; k++) {
-				if ((check[q[k][1]][q[k][0]]<=check[y][x]) && (Arr[q[k][1]][q[k][0]] < size)&&(Arr[q[k][1]][q[k][0]]>0) && (large > q[k][1])) {
-					tt = 1;
-					large = q[k][1];
-					max = check[q[k][1]][q[k][0]];
-					tk = k;
+				if ((check[q[k][1]][q[k][0]]<=check[y][x]) && (Arr[q[k][1]][q[k][0]] < size)&&(Arr[q[k][1]][q[k][0]]>0)) {
+					if (large > q[k][1]) {
+						tt = 1;
+						large = q[k][1];
+						max = check[q[k][1]][q[k][0]];
+						tk = k;
+					}
+					else if (large == q[k][1]) {
+						if (q[k][0] < semi) {
+							tt = 1;
+							semi = q[k][0];
+							max = check[q[k][1]][q[k][0]];
+							tk = k;
+						}
+					}
 				}
 			}
 			
@@ -123,4 +134,3 @@ int main() {
 
 	printf("%d", max);
 }
-*/
