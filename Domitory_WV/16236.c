@@ -1,4 +1,8 @@
 
+//16236 sol
+//해당 코드 확인 필요
+
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -133,4 +137,4 @@ int main() {
 	BFS(x, y);
 
 	printf("%d", max);
-}
+}*/
