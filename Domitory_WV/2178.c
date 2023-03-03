@@ -1,3 +1,4 @@
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -15,23 +16,23 @@ int BFS() {
 	while (head < tail) {
 		int x = q[head][0];
 		int y = q[head][1];
-		printf("%d :  %d %d\n",head, x, y);
+		printf("%d :  %d %d\n", head, x, y);
 		check[y][x] = 1;
 
 		for (int i = 0; i < 4; i++) {
-			if ( ( (x + dx[i]) >= 0 ) && ( (x + dx[i]) < M ) && ( (y + dy[i]) >= 0 ) && ( (y + dy[i]) < N )) {
+			if (((x + dx[i]) >= 0) && ((x + dx[i]) < M) && ((y + dy[i]) >= 0) && ((y + dy[i]) < N)) {
 				if ((Arr[y + dy[i]][x + dx[i]] == 1) && (check[y + dy[i]][x + dx[i]] == 0)) {
-						q[tail][0] = x + dx[i];
-						q[tail][1] = y + dy[i];
-						check[y + dy[i]][x + dx[i]] = 1;
-						tail++;
-						max[y + dy[i]][x + dx[i]] = max[y][x] + 1;
+					q[tail][0] = x + dx[i];
+					q[tail][1] = y + dy[i];
+					check[y + dy[i]][x + dx[i]] = 1;
+					tail++;
+					max[y + dy[i]][x + dx[i]] = max[y][x] + 1;
 				}
 			}
 		}
 
 		head++;
-	
+
 	}
 
 
@@ -55,7 +56,7 @@ int main() {
 	}
 
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < M; j++) {	
+		for (int j = 0; j < M; j++) {
 			printf("%d ", Arr[i][j]);
 		}
 		printf("\n\n");
@@ -71,4 +72,4 @@ int main() {
 
 	printf("%d", max[N - 1][M - 1]);
 
-}
+}*/
