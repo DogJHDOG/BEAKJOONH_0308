@@ -51,4 +51,4 @@ add_executable(BEAKJOONH
         Domitory_WV/9095.c
         Domitory_WV/9461.c
         Domitory_WV/BFS_sample.c
-        Domitory_WV/C_DataStructure_Queue.c)
+        Domitory_WV/C_DataStructure_Queue.c Domitory_WV/1463.c)
