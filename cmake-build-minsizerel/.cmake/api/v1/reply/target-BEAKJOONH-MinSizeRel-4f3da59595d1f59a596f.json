@@ -38,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "-Os -DNDEBUG -fdiagnostics-color=always"
 				}
 			],
 			"language" : "C",
@@ -105,14 +105,15 @@
 				59,
 				60,
 				61,
-				62
+				62,
+				63
 			]
 		},
 		{
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "-Os -DNDEBUG -fdiagnostics-color=always"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -139,7 +140,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-Os -DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -228,7 +229,8 @@
 				59,
 				60,
 				61,
-				62
+				62,
+				63
 			]
 		}
 	],
@@ -610,6 +612,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Domitory_WV/2193.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Domitory_WV/14501.c",
 			"sourceGroupIndex" : 0
 		}
 	],
