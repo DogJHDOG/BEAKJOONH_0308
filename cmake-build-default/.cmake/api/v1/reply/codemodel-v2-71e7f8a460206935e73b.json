@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "RelWithDebInfo",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BEAKJOONH::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BEAKJOONH-RelWithDebInfo-2d36bc91f251749f3c70.json",
+					"jsonFile" : "target-BEAKJOONH-8cfd81cefc1c5939688e.json",
 					"name" : "BEAKJOONH",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-relwithdebinfo",
+		"build" : "C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-default",
 		"source" : "C:/Users/junhy/CLionProjects/BEAKJOONH"
 	},
 	"version" : 
