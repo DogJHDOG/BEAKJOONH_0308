@@ -74,7 +74,6 @@ int main() {
 	for (int i = 0; i < M; i++) {
 		int num = 0;
 		int con = 0;
-		//연결된 부분에 대한 표시를 진행합니다.
 		scanf("%d %d", &num, &con);
 		Arr[num][con] = 1;
 		Arr[con][num] = 1;
