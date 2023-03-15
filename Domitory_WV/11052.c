@@ -1,7 +1,7 @@
 //
 // Created by junhy on 2023-03-15.
 //
-
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -32,4 +32,4 @@ int main() {
         printf("%d", a - input + 1);
     }
     return 0;
-}
+}*/
