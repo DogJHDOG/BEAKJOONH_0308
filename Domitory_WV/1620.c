@@ -6,50 +6,87 @@
 /*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-char Arr[100005][25] = { 0, };
+#include <stdlib.h>
 
-int map[2500][100005] = {0,};
+typedef struct
+{
+    int num;
+    char name[21];
+}monster;
 
 
-int main() {
+int compare(const void* first, const void* second)
+{
+    monster *a = (monster*)first;
+    monster *b = (monster*)second;
 
-	int M, N;
-	scanf("%d %d", &N, &M);
+    if (strcmp(a->name, b->name) > 0)
+        return 1;
+    else
+        return -1;
+}
 
-	for (int i = 1; i <= N; i++) {
-		scanf("%s", &Arr[i]);
-		int hash = 0;
-		for (int j = 0; j < strlen(Arr[i]); j++) {
-			hash += Arr[i][j];
-		}
-		printf("%d", hash);
-		map[hash][i] = 1;
-	}
+int main()
+{
+    int n, m, i;
+    monster* list = NULL;
+    monster* sorted_list = NULL;
+    char op[21];
 
-	for (int i = 1; i <= M; i++) {
-		char temp[30] = { 0, };
-		scanf("%s", temp);
-		
-		if ((temp[0] >= '1') && (temp[0] <= '9')) {
-			int check = atoi(temp);
-			printf("%s\n", Arr[check]);
-		}
+    scanf("%d %d", &n, &m);
 
-		else {
-			int check = 0;
-			for (int j = 0; j < strlen(temp); j++) {
-				check += temp[j];
-			}
-			for (int k = 1; k < 100005; k++) {
-				if (map[check][k] == 1) {
-					if (strcmp(Arr[k], temp) == 0) {
-						printf("%d\n", k);
-					}
-				}
-			}
-		}
-	}
+    list = (monster*)malloc(n * sizeof(monster));
+    // 정렬을 위해서..!
+    sorted_list = (monster*)malloc(n * sizeof(monster));
 
+    for (i = 0; i < n; i++)
+    {
+        scanf(" %s", list[i].name);
+        list[i].num = sorted_list[i].num = i + 1;
+        sorted_list[i] = list[i];
+    }
+
+    qsort(sorted_list, n, sizeof(sorted_list[0]), compare);
+
+    for (i = 0; i < m; i++)
+    {
+        scanf(" %s", op);
+
+        if (op[0] >= '0' && op[0] <= '9')
+        {
+            int idx = atoi(op);
+            printf("%s\n", list[idx - 1].name);
+        }
+            // 이진탐색
+        else
+        {
+            int left, right, mid;
+            left = 0, right = n - 1;
+
+            while (left <= right)
+            {
+                mid = (left + right) / 2;
+
+                if (strcmp(sorted_list[mid].name, op) == 0)
+                {
+                    printf("%d\n", sorted_list[mid].num);
+                    break;
+                }
+                else if (strcmp(sorted_list[mid].name, op) > 0)
+                {
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
+        }
+    }
+
+    free(sorted_list);
+    free(list);
+
+    return 0;
 }*/
