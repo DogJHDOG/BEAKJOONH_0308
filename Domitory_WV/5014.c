@@ -1,7 +1,7 @@
 //
 // Created by junhy on 2023-03-14.
 //
-
+/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -23,7 +23,7 @@ int DFS(int x,int depth){
 
     else {
         for (int i = 0; i < 2; i++) {
-            if (x + dx[i] >= G - U && x + dx[i] >= 1 && x + dx[i] <= F && x + dx[i] <= S + D && check[x + dx[i]] == 0) {
+            if (x + dx[i] >= G +dx[0] && x + dx[i] >= 1 && x + dx[i] <= F && x + dx[i] <= S + dx[1] && check[x + dx[i]] == 0) {
                 check[x + dx[i]] = 1;
                 DFS(x + dx[i], depth + 1);
             }
@@ -43,7 +43,7 @@ int main(){
         dx[1] = U;
         int temp = S - G;
         if(D!=0)
-        temp = temp / D;
+            temp = temp / D;
         check[S-(temp)*D] = 1;
         for(int i =0; i<temp; i++){
             check[S-i*D] =1;
@@ -62,7 +62,7 @@ int main(){
         S = rng;
         int temp = S - G;
         if(U!=0)
-        temp = temp / U;
+            temp = temp / U;
         for(int i =0; i<temp; i++){
             check[S-i*U] =1;
         }
@@ -73,4 +73,4 @@ int main(){
     if(max == 1000001) printf("use the stairs");
     else printf("%d",max);
 
-}
+}*/

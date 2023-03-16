@@ -3,58 +3,61 @@
 //
 
 //1차시도 = 시간초과
+
 /*
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
 
-int Arr[1000000] = {0,};
-int temp[1000000] = {0,};
-int check[100000] = {0,};
+
+
+
+typedef struct _user{
+    int x;
+    int loc;
+
+}User;
+
+
+int temp[1000001] = {0,};
+
+User user[10000001];
+
+int compare(const void *A, const void *B)
+{
+    User *ptA = (User *)A;
+    User *ptB = (User *)B;
+
+    if (ptA->x < ptB->x) return -1;
+    else if (ptA->x > ptB->x) return 1;
+    else return 0;
+}
 
 int main(){
-
 
     int T;
     scanf("%d",&T);
 
-    for(int i = 0 ; i<T; i++){
-        scanf("%d",&Arr[i]);
-        temp[i] = Arr[i];
+    for(int i = 0; i<T; i++) {
+        scanf("%d", &user[i].x);
+        user[i].loc = i;
     }
-
-    int mint = 0;
-    for(int i = 0;i<T; i++){
-        int min = 100000001;
-        for(int j = 0 ; j<T; j++){
-
-            if(min>Arr[j]){
-                min = Arr[j];
-                mint = j;
-            }
-        }
-        check[i] = mint;
-        Arr[mint] = 100000001;
-    }
-    int j = 0;
+    qsort(user, T, sizeof(User), compare);
 
 
-    Arr[check[0]] = 0;
-    for(int i = 0;i<T-1; i++){
+    int tt = 0;
 
-        if(temp[check[i]]==temp[check[i+1]]){
-            Arr[check[i+1]] = j;
-        }
-        else{
-            j++;
-            Arr[check[i+1]] = j;
-        }
+    temp[user[0].loc] = 0;
 
-    }
-
-    for(int i = 0 ; i<T; i++){
-        printf("%d ",Arr[i]);
+    for(int i = 1 ; i<T; i++){
+        if(user[i-1].x != user[i].x) tt++;
+        temp[user[i].loc] = tt;
     }
 
 
+
+    for(int i =0; i<T; i++){
+        printf("%d ",temp[i]);
+    }
 
 }*/
