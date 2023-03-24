@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BEAKJOONH::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BEAKJOONH-Release-e4489c471eaba5b94af4.json",
+					"jsonFile" : "target-BEAKJOONH-Debug-de3378e9f0e74186b99e.json",
 					"name" : "BEAKJOONH",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-release",
+		"build" : "C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-debug",
 		"source" : "C:/Users/junhy/CLionProjects/BEAKJOONH"
 	},
 	"version" : 
