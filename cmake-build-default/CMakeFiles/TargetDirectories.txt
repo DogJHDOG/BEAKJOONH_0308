@@ -1,3 +1,0 @@
-C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-default/CMakeFiles/BEAKJOONH.dir
-C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-default/CMakeFiles/edit_cache.dir
-C:/Users/junhy/CLionProjects/BEAKJOONH/cmake-build-default/CMakeFiles/rebuild_cache.dir
