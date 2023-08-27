@@ -1,8 +1,7 @@
 //
 // Created by junhy on 2023-08-27.
 //
-
-//#include <stdio.h>
+#include <stdio.h>
 //int N;
 //void square(int result[][5], int matrix[][5]){
 //    int temp[5][5] = {0,};
@@ -37,3 +36,4 @@
 //        putchar(10);
 //    }
 //}
+//
